@@ -22,3 +22,19 @@ El archivo .gitignore se ubicará por fuera de las carpetas backend y frontend y
 ```
 /backend/node_modules
 /frontend/node_modules
+```
+De esta manera al actualizar el repositorio en github, las carpetas node_modules serán omitidas durante el proceso.
+
+
+
+###2. NPM
+
+En este caso, se está desarrollando el proyecto sobre Visual Studio. Para ejecutar los comandos de NodeJS, se debe trabajar en la Terminal del editor.
+
+```
+npm init
+```
+
+![](https://github.com/dianaeleira/DianaTrianaScrumBoard/blob/master/assets/img/npm_init.png)
+
+Este comando permite inicializar la aplicación como un proyecto NodeJs. Al ejecutarlo, el programa despliega una serie de preguntas, las cuales sirven como base para crear el archivo packaje.json, el cual contiene la información de las librerías con las cuales fue desarrollado el proyecto.
