@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const boardSchema = new mongoose.Schema({
-    userId: { type: mongoose.Schema.ObjectID, ref: "user" },
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: "user" },
     name: String,
     description: String,
     taskStatus: String,
@@ -9,4 +9,4 @@ const boardSchema = new mongoose.Schema({
     date: { type: Date, default: Date.now }
 });
 const board = mongoose.model("board", boardSchema);
-module.exports.board;
+module.exports = board;
