@@ -1,10 +1,10 @@
 const jwt = require("jsonwebtoken");
 const auth = async (req, res, next) => {
-    let jwtToken = req.heaer("Authorization"); //linea para leer los header de una petición
+    let jwtToken = req.header("Authorization"); //linea para leer los header de una petición
     if (!jwtToken)
         return res
             .status(400)
-            .send("Authorization denied: No token");
+            .send("Authorization denied: No token.");
     jwtToken = jwtToken.split(" ")[1];
     if (!jwtToken)
         return res
@@ -21,4 +21,4 @@ const auth = async (req, res, next) => {
     }
 }
 
-module.exports = { auth };
+module.exports = auth;

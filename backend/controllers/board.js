@@ -5,7 +5,7 @@ const saveTask = async (req, res) => {
             .status(400)
             .send("Process failed: Incomplete data.");
    const board = new Board({
-        userId: req.body.userId,
+        userId: req.user._id,
         name: req.body.name,
         description: req.body.description,
         taskStatus: "to-do"
